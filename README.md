@@ -67,7 +67,7 @@ Make sure you have installed all of the following prerequisites on your developm
 1. Clone this repository
 
 ```sh
-git clone https://github.com/marcusvbrangel/ignite-desafio-corrigindo-codigo
+git clone https://github.com/marcusvbrangel/rentalx.git
 ```
 
 2. Install the dependencies
