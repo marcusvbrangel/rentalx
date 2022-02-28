@@ -3,7 +3,7 @@
 
 </br>
 
-# Ignite Node - Rentalx
+# Rentalx
 
 </br>
 
