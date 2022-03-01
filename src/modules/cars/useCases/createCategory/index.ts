@@ -2,6 +2,7 @@ import { CategoriesRepository } from "../../repositories/CategoriesRepository";
 import { CreateCategoryController } from "./CreateCategoryController";
 import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
 
+ // singleton pattern...
 const categoriesRepository = CategoriesRepository.getInstance();
 
 const createCategoryUseCase = new CreateCategoryUseCase(categoriesRepository);
