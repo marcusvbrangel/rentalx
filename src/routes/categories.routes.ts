@@ -2,9 +2,7 @@ import { Router } from "express";
 import { v4 as uuidv4 } from "uuid";
 
 import { CategoriesRepository } from "../modules/cars/repositories/CategoriesRepository";
-import { PostgresCategoriesRepository } from "../modules/cars/repositories/PostgresCategoriesRepository";
 import { CreateCategoryService } from "../modules/cars/services/CreateCategoryService";
-
 
 const categoriesRoutes = Router();
 
