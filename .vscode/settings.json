@@ -6,10 +6,7 @@
   "editor.rulers": [
     80,
     120
-  ],
-  "files.autoSave": "off",
-  "editor.padding.bottom": 20,
-  "editor.padding.top": 20,
+  ],  
   "editor.quickSuggestionsDelay": 100,
   "editor.snippetSuggestions": "top",
   "editor.formatOnSave": false,
