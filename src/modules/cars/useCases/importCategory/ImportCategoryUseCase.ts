@@ -53,7 +53,22 @@ class ImportCategoryUseCase {
     
     const categories = await this.loadCategories(file);
 
-    console.log("categories", categories);
+    categories.map(async (category) => {
+
+      const { name, description } = category;
+
+      const categoryAlreadyExists = this.categoriesRepository.findByName(name);
+
+      if (!categoryAlreadyExists) {
+
+        this.categoriesRepository.create({
+          name,
+          description
+        });
+
+      }
+
+    });
 
   }
 
