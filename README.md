@@ -3,7 +3,7 @@
 
 </br>
 
-# Rentalx
+# RentalX
 
 </br>
 
