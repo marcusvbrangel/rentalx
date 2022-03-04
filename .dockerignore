@@ -1,5 +1,14 @@
 node_modules
 dist
 .git
+.gitignore
 .vscode
 Dockerfile
+.dockerignore
+.docker-compose.yaml
+docs
+.editorconfig
+
+
+
+
