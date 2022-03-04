@@ -1,14 +1,15 @@
 {
-  "name": "project",
+  "name": "rentalx",
   "version": "1.0.0",
-  "description": "",
+  "description": "Car rental project",
   "main": "index.js",
+  "repository": "https://github.com/marcusvbrangel/rentalx",
   "scripts": {
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["javascript", "typescript", "nodejs", "express", "typeorm", "jwt", "docker"],
+  "author": "Marcus Rangel",
+  "license": "MIT",
   "dependencies": {
     "csv-parse": "^5.0.4",
     "express": "^4.17.3",
