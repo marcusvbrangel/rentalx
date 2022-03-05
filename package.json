@@ -7,14 +7,24 @@
   "scripts": {
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
   },
-  "keywords": ["javascript", "typescript", "nodejs", "express", "typeorm", "jwt", "docker"],
+  "keywords": [
+    "javascript",
+    "typescript",
+    "nodejs",
+    "express",
+    "typeorm",
+    "jwt",
+    "docker"
+  ],
   "author": "Marcus Rangel",
   "license": "MIT",
   "dependencies": {
     "csv-parse": "^5.0.4",
     "express": "^4.17.3",
     "multer": "^1.4.4",
+    "reflect-metadata": "^0.1.13",
     "swagger-ui-express": "^4.3.0",
+    "typeorm": "^0.2.45",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
