@@ -4,5 +4,9 @@
   "host": "localhost",
   "username": "app",
   "password": "1234",
-  "database": "rentalx"
+  "database": "rentalx",
+  "migrations": ["./src/database/migrations/*.ts"],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
 }
