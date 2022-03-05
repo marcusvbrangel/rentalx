@@ -1,6 +1,7 @@
 version: "3.7"
 
 services:
+
   app:    
     build: .
     container_name: rentalx
@@ -8,5 +9,30 @@ services:
       - 3333:3333
     volumes:
       - .:/usr/app
+    networks:
+      - rentalx-net
+    depends_on:
+      - rentalxdb
+  
+  rentalxdb:
+    image: postgres:14.2
+    container_name: rentalxdb
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=rentalx
+    volumes:
+      - pgdata:/data/postgres
+    networks:
+      - rentalx-net
 
+volumes:
+  pgdata:
+    driver: local
 
+networks:
+  rentalx-net:
+    driver: bridge
