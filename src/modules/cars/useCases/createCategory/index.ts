@@ -2,12 +2,12 @@ import { CategoriesRepository } from "../../repositories/implementations/Categor
 import { CreateCategoryController } from "./CreateCategoryController";
 import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
 
- // singleton pattern...
-const categoriesRepository = CategoriesRepository.getInstance();
+export function createCategoryController() {
 
-const createCategoryUseCase = new CreateCategoryUseCase(categoriesRepository);
+  const categoriesRepository = new CategoriesRepository();
+  
+  const createCategoryUseCase = new CreateCategoryUseCase(categoriesRepository);
 
-const createCategoryController = new CreateCategoryController(createCategoryUseCase);
-
-export { createCategoryController }
-
+  return new CreateCategoryController(createCategoryUseCase);
+  
+}
