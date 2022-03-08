@@ -1,11 +1,14 @@
 {
+  "name": "default",
   "type": "postgres",
   "port": 5432,
   "host": "localhost",
   "username": "app",
   "password": "1234",
   "database": "rentalx",
-  "migrations": ["./src/database/migrations/*.ts"],
+  "logging": true,
+  "entities": ["./src/modules/**/entities/*.ts"],
+  "migrations": ["./src/database/migrations/*.ts"],  
   "cli": {
     "migrationsDir": "./src/database/migrations"
   }
