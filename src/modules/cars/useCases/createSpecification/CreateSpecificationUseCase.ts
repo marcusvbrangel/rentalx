@@ -12,7 +12,7 @@ class CreateSpecificationUseCase {
   constructor( 
     @inject("SpecificationsRepository")
     private specificationsRepository: ISpecificationsRepository
-  ) {console.log("--------CreateSpecificationUseCase-----------------")}
+  ) {}
 
   async execute({ name, description}: IRequest): Promise<void> {
 
