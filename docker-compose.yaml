@@ -30,9 +30,24 @@ services:
     networks:
       - rentalx-net
 
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4
+    restart: always
+    networks:
+      - rentalx-net
+    ports:
+      - 5050:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=marcus.vbrangel@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=5678
+    volumes:
+      - pgadmin:/root/.pgadmin
+
 volumes:
   pgdata:
-    driver: local
+  pgadmin:
+    #driver: local
 
 networks:
   rentalx-net:
