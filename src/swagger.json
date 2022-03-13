@@ -8,8 +8,11 @@
      "email": "marcus.vbrangel@gmail.com"
    }
  },
+
  "paths": {
+
    "/categories": {
+
      "post": {
         "tags": ["Category"],
         "summary": "Create a category",
@@ -44,6 +47,7 @@
           }
         }
      },
+
      "get": {
        "tags": ["Category"],
        "summary": "List categories",
@@ -74,6 +78,108 @@
          }
        }
      }
+  },
+
+  "/categories/inport": {
+
+    "post": {
+      "tags": ["Category"],
+      "summary": ["Upload a new category"],
+      "description": ["Upload a new category"],
+      "requestBody": {
+        "content":{
+          "multipart/form-data": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "files": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "responses":{
+        "201":{
+          "description": "Created"
+        }
+      }
+    }
+  },
+
+  "/specifications": {
+
+    "post": {
+      "tags": ["Specifications"],
+      "summary": ["Create a specification"],
+      "description": ["Create a new specification"],
+      "requestBody": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/definitions/Specification"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "created"
+        },
+        "500": {
+          "description": "Specification already exists!"
+        }
+      }
+    },
+
+    "get": {
+      "tags": ["Specifications"],
+      "summary": "List of specifications",
+      "description": "List all specifications",
+      "responses": {
+        "200": {
+          "description": "Success",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "properties":{
+                  "items": {
+                    "type": "object",
+                    "properties":{
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+ },
+
+ "definitions": {
+   "Specification": {
+     "type": "object",
+     "properties": {
+       "name": {
+         "type": "string"
+       },
+       "description": {
+         "type": "string"
+       }
+     }
    }
  }
+
 }
